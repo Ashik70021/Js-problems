@@ -5,20 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
 
 <body>
-    <script type="text/javascript">
-        // silly code to demonstrate output
 
-        document.write("Hello world!");
 
-        document.write("<p>How are <br/>" +
-            "<i>you</i>?</p>");
+    <p id="test">Here is some static text as well</p>
+    <button onclick="myFunction()">Submit</button>
+
+    <button onclick="alertFunction()">Alert</button>
+
+    <script>
+        function myFunction() {
+            document.getElementById("test").innerHTML = "Paragraph changed"
+        }
+
+        function alertFunction(){
+            window.alert("Risky")
+        }
     </script>
-
-    <p>Here is some static text as well.
-    </p>
 
 </body>
 

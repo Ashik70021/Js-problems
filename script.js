@@ -2,7 +2,7 @@
 function isPrime(n) {
     if (n <= 1) return false;
 
-    for (let i = 2; i <= Math.sqrt(n); i++) {
+    for (var i = 2; i <= Math.sqrt(n); i++) {
         if (n % i === 0) return false;
     }
     return true;
@@ -78,3 +78,31 @@ function sumNatural(n){
 }
 
 console.log(sumNatural(5));
+
+// nth Fibonacci series
+
+function fibonacci(n){
+    if(n == 0) return 0;
+    if(n == 1) return 1;
+
+    return fibonacci(n-1) + fibonacci(n-2);
+ }
+ console.log(fibonacci(6));
+
+//  Fibonacci series for n terms
+ function fibonacciSeries(n) {
+  let fib = [0, 1]; 
+
+  if (n <= 0) return [0];
+  if (n === 1) return [1];
+  
+  for (let i = 2; i < n; i++) {
+    fib.push(fib[i - 1] + fib[i - 2]);
+  }
+
+  return fib;
+}
+
+console.log(fibonacciSeries(6));
+
+
