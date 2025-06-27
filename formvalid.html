@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password validation</title>
+</head>
+
+<body>
+  <h3>Password validation</h3>
+  <!-- <form action="" onsubmit="checkPassword()"> -->
+    <label>Password:</label><br>
+    <input type="text" id="password">
+    <span id="error" style="color:red"></span>
+    <br><br>
+    <button onclick="checkPassword()">Submit</button>
+  <!-- </form> -->
+
+  <script>
+    function checkPassword() {
+      var password = document.getElementById("password").value;
+      var error = document.getElementById("error");
+
+      error.innerHTML = "";
+
+      var hasUpper = /[A-Z]/.test(password);
+      var hasLower = /[a-z]/.test(password);
+      var hasNumber = /[0-9]/.test(password);
+      var hasSpecial = /[!@#$%^&*]/.test(password);
+
+      if(password.length < 6 || !hasUpper || !hasLower || !hasNumber || !hasSpecial){
+        error.innerHTML = "pass must at least 6 char. include upper/lower/num/special";
+      }
+      else{
+        error.style.color = "green";
+        error.innerHTML = "valid password";
+      }
+    }
+  </script>
+</body>
+
+</html>

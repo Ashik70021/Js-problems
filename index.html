@@ -1,31 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+  <title>Rowspan and Colspan Example</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 60%;
+    }
+    th,td{
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
 </head>
-
 <body>
 
+  <h2>Student Marks Table</h2>
 
-    <p id="test">Here is some static text as well</p>
-    <button onclick="myFunction()">Submit</button>
-
-    <button onclick="alertFunction()">Alert</button>
-
-    <script>
-        function myFunction() {
-            document.getElementById("test").innerHTML = "Paragraph changed"
-        }
-
-        function alertFunction(){
-            window.alert("Risky")
-        }
-    </script>
+  <table>
+    <tr>
+      <th rowspan="2">Name</th>
+      <th colspan="3">Subjects</th>
+    </tr>
+    <tr>
+      <th>Math</th>
+      <th>English</th>
+      <th>Science</th>
+    </tr>
+    <tr>
+      <td>Rahim</td>
+      <td>85</td>
+      <td>78</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <td>Karim</td>
+      <td>90</td>
+      <td>88</td>
+      <td>95</td>
+    </tr>
+  </table>
 
 </body>
-
 </html>
